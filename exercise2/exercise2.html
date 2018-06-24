@@ -1,0 +1,58 @@
+<html>
+<head>
+
+	<title>Exercise 2</title>
+	<meta charset="utf-8"/>
+
+	<style type="text/css">
+
+		canvas {
+			border: 2px solid black;
+			padding: 10px;
+			margin: 5px;
+		}
+
+		div#controls {
+			border: 2px solid #b4dae8;
+			padding: 10px;
+			margin: 5px;
+			width: 500px;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+		function drawSomething() {
+			var canvas = document.getElementById('drawHere');
+
+			var x1 = document.getElementById('x1').value;
+			var y1 = document.getElementById('y1').value;
+			var x2 = document.getElementById('x2').value;
+			var y2 = document.getElementById('y2').value;
+			var color = document.getElementById('color').value;
+
+			var context = canvas.getContext("2d");
+			context.fillStyle = "#" + color;
+			context.fillRect(x1, y1, x2, y2);
+		}
+
+	</script>
+
+</head>
+<body>
+
+<div id="draw">
+	<canvas id="drawHere" width="500" height="500"></canvas>
+</div>
+<div id="controls">
+	<div>X1: <input id="x1" type="text" value="0" autofocus=true></div>
+	<div>Y1: <input id="y1" type="text" value="0"></div>
+	<div>X2: <input id="x2" type="text" value="150"></div>
+	<div>Y2: <input id="y2" type="text" value="75"></div>
+	<div>color: #<input id="color" type="text" value="FF0000"></div>
+	<div><input type="button" onclick="drawSomething()" value="Draw"></div>
+</div>
+
+</body>
+<html>
