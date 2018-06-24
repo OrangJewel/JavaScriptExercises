@@ -1,0 +1,6 @@
+Ewan Programming Notes
+
+Need a text editor (Kate?)
+Need a source control system
+Need to understand HTML and JavaScript
+
